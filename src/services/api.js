@@ -1,9 +1,7 @@
-import axios from "axios";
+import axios from 'axios';
 
-export const api = axios.create({
-    baseURL: "http://107.178.219.190:8080"
-});
+const api = axios.create({
+    baseURL: "http://107.178.219.190:8080/api/"
+})
 
-export const createSession = async (usuario, password) => {
-    return api.post("/api/users", { usuario, password});
-}
+export default api;
