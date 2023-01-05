@@ -5,15 +5,15 @@
     justify-content: center;
     min-height: 100vh;
     padding: 0 2rem;
-    background-color: black;
+    background-color: #2b4f71;
 }
 
 #login .title {
-    color: #f1f1f1;
+    color: #1d242c;
 }
 
 #login .form {
-    background-color: #38383f;
+    background-color: #c9cfdf;
     width: 100%;
     max-width: 480px;
     padding: 0.5rem;
@@ -21,7 +21,7 @@
 
 #login .field {
     padding-bottom: 0.5rem;
-    color: #f1f1f1;
+    color: #1d242c;
 }
 
 #login .field label {
