@@ -22,7 +22,7 @@ const Login = () => {
   const logar = () => {
     var loginExiste = false;
     for (var i = 0; i < contas.length; i++) {
-      if (contas[i].password == senha && contas[i].login == usuario) {
+      if (contas[i].password === senha && contas[i].login === usuario) {
         loginExiste = true;
         break;
       } else {

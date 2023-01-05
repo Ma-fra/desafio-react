@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import api from "../services/api";
 
 const SignUp = () => {
@@ -8,7 +8,7 @@ const SignUp = () => {
   async function cadastrarUsuario(e) {
     console.log(senha);
     if (
-      senha == confirmacaoSenha &&
+      senha === confirmacaoSenha &&
       senha !== undefined &&
       nomeUsuario !== undefined &&
       confirmacaoSenha !== undefined
