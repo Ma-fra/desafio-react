@@ -1,5 +1,6 @@
 import React, { useState, createContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { createSession } from "../services/api";
 
 export const AuthContext = createContext();
 
@@ -17,20 +18,17 @@ export const AuthProvider = ({ children }) => {
     setLoading(false); //ajuda fazendo com que a programação startar depois de verificar se existe coisa na memório
   }, []);
 
-  const login = (usuario, password) => {
-    console.log("login auth", { usuario, password });
+  const login = async (usuario, password) => {
+    const response = await createSession(usuario, password);
 
-    const loggedUser = {
-      id: "123",
-      usuario,
-    };
+    console.log("login", response.data);
+
+    const loggedUser = response.data.user;
 
     localStorage.setItem("user", JSON.stringify(loggedUser));
 
-    if (password === "secret") {
       setUser(loggedUser);
       navigate("/");
-    }
   };
 
   const logout = () => {
